@@ -1,0 +1,221 @@
+/* Caleb Yarborough */
+
+html {
+    background-color: #67697C;
+    background-image: url("../images/tractor_background5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 3fr 35px;
+    grid-template-areas:
+        "head"
+        "nav"
+        "main"
+        "foot";
+    font-family: Lexend, Arial, Helvetica, sans-serif;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    gap: 1rem;
+}
+
+header {
+    grid-area: head;
+    text-align: center;
+}
+
+header h1 {
+    background: linear-gradient(90deg, #2e9409, #66ee17, #86e70f, #2f9509);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #20211b;
+    padding: 0.5rem 2%;
+    border-radius: 1rem;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+nav a {
+    flex: 1;
+    padding-left: 0;
+}
+
+nav img {
+    width: 3rem;
+    height: auto;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 1rem 0.5rem;
+}
+
+ul a {
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+ul a#current {
+    color: #66ee17;
+}
+
+ul a:hover,
+ul a:focus {
+    color: #135fe4;
+}
+
+main {
+    grid-area: main;
+    text-align: center;
+    margin-top: -6rem;
+    overflow-y: auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #e3ce10, #e1e41c, #d4cd0c, #e3ce10);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 0.5rem 2%;
+    margin-top: 1rem;
+}
+
+footer {
+    grid-area: foot;
+    background-color: #67697C;
+    color: #12130F;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: .7rem 0;
+}
+
+/* Neutralize injected divs */
+#hl-aria-live-message-container,
+#hl-aria-live-alert-container {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* Media query for screens with max width of 540px */
+@media (max-width: 540px) {
+    body {
+        max-width: 95%;
+        gap: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    ul {
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-left: 0;
+    }
+
+    ul li {
+        padding: 0.5rem 0 .5rem 10px;
+    }
+
+    ul a {
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin-top: -3rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media query for screens with max width of 430px */
+@media (max-width: 430px) {
+    body {
+        max-width: 95%;
+        gap: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    ul {
+        align-items: flex-start;
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    ul li {
+        padding: 0.5rem 0 .5rem 0;
+    }
+
+    ul a {
+        font-size: 0.8rem;
+    }
+
+    main {
+        margin-top: -3rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        margin: 0.5rem 0;
+    }
+}

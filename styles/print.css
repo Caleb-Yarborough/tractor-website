@@ -1,0 +1,34 @@
+/* Caleb Yarborough */ 
+body {
+    font-family: "Times New Roman", Times, serif;
+    width: auto;
+    border: none;
+    box-shadow: none;
+    margin: .5in;
+   }
+
+header h1, section h2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: black;
+   }
+
+nav {
+    display: none;
+   }
+
+header {
+    border-bottom: 2px solid black;
+   }
+
+section {
+    margin: 1in;
+}
+
+button {
+    display: none;
+}
+
+footer {
+    border-top: 2px solid black;
+    display: none;
+   } 

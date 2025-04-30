@@ -1,0 +1,336 @@
+/* Caleb Yarborough */
+
+.heavy-duty-display {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.compact-display {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.attachments-display {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+    width: 50%;
+    float: left;
+    max-width: 334px;
+}
+
+.ProductDisplay {
+    background-color: white;
+    border: 5px solid white;
+}
+
+.ProductDisplay img {
+    margin-top: 3rem;
+    max-width: 334px;
+    height: auto;
+}
+
+.ProductDisplay {
+    overflow-y: auto;
+}
+
+main section.CartDisplay {
+    background-color: white !important;
+    border: 5px solid white;
+    padding: 1rem 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+}
+
+main section.CartDisplay table {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #333;
+}
+
+main section.CartDisplay table th,
+main section.CartDisplay table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+main section.CartDisplay table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+main section.CartDisplay form,
+main section.CartDisplay p {
+    width: 80%;
+    max-width: 800px;
+    margin: .5em auto;
+}
+
+/* Internet Help for radio button styling */
+.radio-inputs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 60%;
+    font-size: 14px;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: #135fe4;
+    transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked+.name {
+    background-color: #fff;
+    font-weight: 600;
+}
+
+/* Internet Help for button styling */
+.addCart {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 1;
+    color: #ffffff;
+    padding: 0.7em 1.7em;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    background-color: #135fe4;
+
+}
+
+.addCart:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.addCart:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.addCart:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #66ee17;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.addCart:hover {
+    color: #ffffff;
+    border: 1px solid #66ee17;
+}
+
+.addCart:hover:before {
+    top: -35%;
+    background-color: #66ee17;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.addCart:hover:after {
+    top: -45%;
+    background-color: #66ee17;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.removeButton {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    padding: 0.7em 1.7em;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    height: 2rem;
+    line-height: .5rem;
+    background-color: #e3ce10;
+
+}
+
+.removeButton:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.removeButton:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.removeButton:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #dd2410;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.removeButton:hover {
+    color: #ffffff;
+    border: 1px solid #dd2410;
+}
+
+.removeButton:hover:before {
+    top: -35%;
+    background-color: #dd2410;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.removeButton:hover:after {
+    top: -45%;
+    background-color: #dd2410;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.invisible {
+    clip: rect(0, 0, 0, 0);
+}
+
+
+@media (max-width: 540px) {
+
+    h2 {
+        margin-top: .5rem;
+    }
+
+    .radio-inputs {
+        margin-top: 2.5rem;
+    }
+
+    .ProductDisplay img {
+        margin-top: 1rem;
+    }
+
+    .heavy-duty-display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .compact-display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .attachments-display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item {
+        padding-top: 2rem;
+        float: none;
+    }
+}
+
+@media (max-width: 430px) {
+
+    h2 {
+        margin-top: .5rem;
+    }
+
+    .radio-inputs {
+        margin-top: 2.5rem;
+    }
+
+    .ProductDisplay img {
+        margin-top: 1rem;
+    }
+
+    .heavy-duty-display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .compact-display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .attachments-display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item {
+        padding-top: 2rem;
+        float: none;
+    }
+}

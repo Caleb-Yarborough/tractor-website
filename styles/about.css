@@ -1,0 +1,15 @@
+/* Caleb Yarborough */ 
+
+#story {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.title {
+    color: #135fe4;
+}
+
